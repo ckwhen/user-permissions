@@ -5,6 +5,17 @@
   "repository": "https://github.com/ckwhen/user-permissions.git",
   "author": "Chih Kai Wen <ckwen1988@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "babel src -d lib --ignore stories.js",
+    "build:watch": "babel src -w -d lib",
+    "prepublish": "yarn run build",
+    "lint": "eslint src/**",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "mock": "node examples/server.js",
+    "dev": "cross-env NODE_ENV=production PROJECT_ENV=dev webpack-dev-server --config examples/webpack.config.js",
+    "start": "node ./node_modules/concurrently/src/main.js \"yarn run mock\" \"yarn run dev\""
+  },
   "dependencies": {
     "axios": "0.18.0",
     "lodash": "4.17.10",
