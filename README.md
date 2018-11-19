@@ -98,7 +98,9 @@ class Foo extends Component {
 
 ```JS
 // store.js
-import { createStore, applyMiddleware } from 'redux';import { permissionMiddleware } from 'user-permissions';import rootReducer from './reducers';
+import { createStore, applyMiddleware } from 'redux';
+import { permissionMiddleware } from 'user-permissions';
+import rootReducer from './reducers';
 
 const store = createStore(rootReducer, {}, applyMiddleware(
   permissionMiddleware,
