@@ -9,6 +9,8 @@
 
 ## Flow
 
+![image](https://github.com/ckwhen/user-permissions/blob/master/img/flow.png)
+
 ## Demo
 
 ```bash
